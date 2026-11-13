@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal Belajar IPA: Gaya & Hukum Newton</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 min-h-screen flex flex-col">
+
+    <!-- Header / Navbar -->
+    <header class="bg-gradient-to-r from-indigo-600 to-blue-600 text-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-4 py-4 flex flex-col sm:flex-row justify-between items-center gap-3">
+            <div class="flex items-center space-x-3">
+                <div class="bg-white/10 p-2.5 rounded-xl backdrop-blur-md">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-yellow-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                    </svg>
+                </div>
+                <div>
+                    <h1 class="text-lg sm:text-xl font-bold tracking-tight">Portal IPA Terpadu</h1>
+                    <p class="text-xs text-blue-100">Materi Gaya & 10 Soal Hukum Newton</p>
+                </div>
+            </div>
+            <nav class="flex flex-wrap justify-center gap-1 sm:gap-2 bg-black/10 p-1.5 rounded-xl backdrop-blur-sm">
+                <button onclick="switchTab('materi')" id="btn-materi" class="px-4 py-2 text-sm font-medium rounded-lg transition-all bg-white text-indigo-600 shadow-sm">Ringkasan Materi</button>
+                <button onclick="switchTab('soal')" id="btn-soal" class="px-4 py-2 text-sm font-medium rounded-lg transition-all text-white hover:bg-white/10">Daftar 10 Soal</button>
+                <button onclick="switchTab('pengiriman')" id="btn-pengiriman" class="px-4 py-2 text-sm font-medium rounded-lg transition-all text-white hover:bg-white/10">Kirim Tugas WA</button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content Container -->
+    <main class="flex-grow max-w-6xl w-full mx-auto px-4 py-8">
+
+        <!-- TAB 1: RINGKASAN MATERI -->
+        <section id="tab-materi" class="space-y-6">
+            <div class="bg-white rounded-2xl shadow-sm border border-slate-200 p-6 sm:p-8">
+                <div class="border-b border-slate-100 pb-4 mb-6">
+                    <span class="text-xs font-semibold uppercase tracking-wider text-indigo-600 bg-indigo-50 px-3 py-1 rounded-full">Bab Dinamika Partikel</span>
+                    <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mt-2">Konsep Gaya & Hukum Newton</h2>
+                    <p class="text-slate-600 text-sm mt-1">Pelajari ringkasan materi di bawah ini dengan cermat sebelum mengerjakan soal latihan.</p>
+                </div>
+
+                <!-- Sub-materi 1: Pengertian Gaya -->
+                <div class="space-y-6">
+                    <div class="bg-gradient-to-br from-blue-50 to-indigo-50/50 p-6 rounded-xl border border-blue-100">
+                        <h3 class="text-lg font-bold text-blue-900 flex items-center gap-2">
+                            <span class="bg-blue-600 text-white w-6 h-6 rounded-full inline-flex items-center justify-center text-xs">1</span>
+                            Pengertian dan Jenis-Jenis Gaya
+                        </h3>
+                        <p class="text-slate-700 mt-2 text-sm leading-relaxed">
+                            <strong>Gaya</strong> adalah tarikan atau dorongan yang bekerja pada suatu benda. Gaya dapat menyebabkan benda diam menjadi bergerak, ubah arah gerak, atau merubah bentuk benda. Satuan Internasional (SI) untuk gaya adalah <strong>Newton (N)</strong> atau <strong>kg·m/s²</strong>.
+                        </p>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4">
+                            <div class="bg-white p-4 rounded-lg shadow-xs border border-slate-200">
+                                <h4 class="font-semibold text-slate-800 text-sm">Gaya Sentuh</h4>
+                                <p class="text-xs text-slate-600 mt-1">Gaya yang bekerja melalui sentuhan fisik langsung (contoh: gaya otot, gaya gesek, gaya pegas).</p>
+                            </div>
+                            <div class="bg-white p-4 rounded-lg shadow-xs border border-slate-200">
+                                <h4 class="font-semibold text-slate-800 text-sm">Gaya Tak Sentuh</h4>
+                                <p class="text-xs text-slate-600 mt-1">Gaya yang bekerja tanpa bersentuhan langsung (contoh: gaya gravitasi, gaya magnet, gaya listrik).</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Sub-materi 2: Hukum Newton I -->
+                    <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-xs">
+                        <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
+                            <span class="bg-indigo-600 text-white w-6 h-6 rounded-full inline-flex items-center justify-center text-xs">2</span>
+                            Hukum I Newton (Kelembaman / Inersia)
+                        </h3>
+                        <p class="text-slate-700 mt-2 text-sm leading-relaxed">
+                            Bunyi: <em>"Jika resultan gaya yang bekerja pada benda bernilai nol, maka benda yang diam akan tetap diam, dan benda yang bergerak akan tetap bergerak dengan kecepatan tetap."</em>
+                        </p>
+                        <div class="mt-3 p-4 bg-slate-100 rounded-lg text-sm text-indigo-900 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2 border-l-4 border-indigo-600">
+                            <div>
+                                <span class="text-xs uppercase font-bold text-indigo-500 block">Rumus Utama</span>
+                                <span class="font-bold text-lg font-mono">ΣF = 0</span>
+                            </div>
+                            <span class="text-xs text-slate-600 bg-white px-3 py-1.5 rounded border border-slate-200">Contoh: Penumpang terdorong ke depan saat bus direm mendadak.</span>
+                        </div>
+                    </div>
+
+                    <!-- Sub-materi 3: Hukum Newton II -->
+                    <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-xs">
+                        <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
+                            <span class="bg-indigo-600 text-white w-6 h-6 rounded-full inline-flex items-center justify-center text-xs">3</span>
+                            Hukum II Newton (Percepatan & Gaya)
+                        </h3>
+                        <p class="text-slate-700 mt-2 text-sm leading-relaxed">
+                            Bunyi: <em>"Percepatan sebuah benda berbanding lurus dengan gaya total yang bekerja padanya dan berbanding terbalik dengan massanya."</em>
+                        </p>
+                        <div class="mt-3 p-4 bg-slate-100 rounded-lg text-sm text-indigo-900 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3 border-l-4 border-indigo-600">
+                            <div>
+                                <span class="text-xs uppercase font-bold text-indigo-500 block">Rumus Utama</span>
+                                <span class="font-bold text-lg font-mono">F = m × a &nbsp;|&nbsp; a = F / m</span>
+                            </div>
+                            <span class="text-xs text-slate-600 bg-white px-3 py-1.5 rounded border border-slate-200">
+                                <strong>F</strong> = Gaya (N), <strong>m</strong> = Massa (kg), <strong>a</strong> = Percepatan (m/s²)
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- Sub-materi 4: Hukum Newton III -->
+                    <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-xs">
+                        <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
+                            <span class="bg-indigo-600 text-white w-6 h-6 rounded-full inline-flex items-center justify-center text-xs">4</span>
+                            Hukum III Newton (Aksi - Reaksi)
+                        </h3>
+                        <p class="text-slate-700 mt-2 text-sm leading-relaxed">
+                            Bunyi: <em>"Jika benda pertama memberikan gaya pada benda kedua, maka benda kedua akan memberikan gaya yang besarnya sama namun arahnya berlawanan."</em>
+                        </p>
+                        <div class="mt-3 p-4 bg-slate-100 rounded-lg text-sm text-indigo-900 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2 border-l-4 border-indigo-600">
+                            <div>
+                                <span class="text-xs uppercase font-bold text-indigo-500 block">Rumus Utama</span>
+                                <span class="font-bold text-lg font-mono">F<sub>aksi</sub> = - F<sub>reaksi</sub></span>
+                            </div>
+                            <span class="text-xs text-slate-600 bg-white px-3 py-1.5 rounded border border-slate-200">Contoh: Dorongan gas semburan roket ke bawah meluncurkan roket ke atas.</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-8 flex justify-end">
+                    <button onclick="switchTab('soal')" class="bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-3 rounded-xl font-medium text-sm transition shadow-md flex items-center gap-2">
+                        Lanjut ke 10 Soal Latihan &rarr;
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- TAB 2: DAFTAR 10 SOAL -->
+        <section id="tab-soal" class="hidden space-y-6">
+            <div class="bg-white rounded-2xl shadow-sm border border-slate-200 p-6 sm:p-8">
+                <div class="border-b border-slate-100 pb-4 mb-6 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+                    <div>
+                        <span class="text-xs font-semibold uppercase tracking-wider text-emerald-600 bg-emerald-50 px-3 py-1 rounded-full">Evaluasi Mandiri</span>
+                        <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mt-2">10 Soal Teori & Hitungan Hukum Newton</h2>
+                        <p class="text-slate-600 text-sm mt-1">Tuliskan jawaban beserta langkah penyelesaian (Diketahui, Ditanya, Dijawab) di buku kertas Anda.</p>
+                    </div>
+                    <div class="bg-amber-50 border border-amber-200 p-3 rounded-xl text-amber-800 text-xs flex items-center gap-2 shrink-0">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-amber-600 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                        </svg>
+                        <span>Kerjakan di kertas, foto, lalu kirim ke WhatsApp!</span>
+                    </div>
+                </div>
+
+                <!-- Daftar Soal -->
+                <div class="space-y-6">
+                    <!-- Soal 1 -->
+                    <div class="p-5 rounded-xl border border-slate-200 bg-slate-50/50 hover:bg-slate-50 transition">
+                        <div class="flex items-start gap-3">
+                            <span class="bg-indigo-600 text-white font-bold text-sm w-7 h-7 rounded-lg flex items-center justify-center shrink-0">1</span>
+                            <div class="w-full">
+                                <span class="text-xs font-semibold text-indigo-600 bg-indigo-50 px-2 py-0.5 rounded">Teori - Hukum Newton I</span>
+                                <p class="text-slate-800 text-sm sm:text-base mt-2 font-medium">
+                                    Mengapa tubuh penumpang di dalam mobil yang sedang melaju kencang akan terdorong ke depan secara tiba-tiba ketika pengemudi mengerem mendadak? Jelaskan kaitannya dengan konsep kelembaman (inersia)!
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Soal 2 -->
+                    <div class="p-5 rounded-xl border border-slate-200 bg-slate-50/50 hover:bg-slate-50 transition">
+                        <div class="flex items-start gap-3">
+                            <span class="bg-indigo-600 text-white font-bold text-sm w-7 h-7 rounded-lg flex items-center justify-center shrink-0">2</span>
+                            <div class="w-full">
+                                <span class="text-xs font-semibold text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded">Hitungan - Hukum Newton II</span>
+                                <p class="text-slate-800 text-sm sm:text-base mt-2 font-medium">
+                                    Sebuah kotak kayu bermassa <strong>10 kg</strong> berada di atas lantai licin. Kotak tersebut ditarik oleh gaya mendatar sebesar <strong>50 N</strong> ke arah kanan. Hitunglah besar percepatan (a) yang dialami kotak tersebut!
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Soal 3 -->
+                    <div class="p-5 rounded-xl border border-slate-200 bg-slate-50/50 hover:bg-slate-50 transition">
+                        <div class="flex items-start gap-3">
+                            <span class="bg-indigo-600 text-white font-bold text-sm w-7 h-7 rounded-lg flex items-center justify-center shrink-0">3</span>
+                            <div class="w-full">
+                                <span class="text-xs font-semibold text-indigo-600 bg-indigo-50 px-2 py-0.5 rounded">Teori - Inersia & Massa</span>
+                                <p class="text-slate-800 text-sm sm:text-base mt-2 font-medium">
+                                    Jelaskan hubungan antara massa suatu benda dengan sifat kelembamannya! Mengapa mendorong truk mogok terasa jauh lebih berat daripada mendorong sepeda motor?
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Soal 4 -->
+                    <div class="p-5 rounded-xl border border-slate-200 bg-slate-50/50 hover:bg-slate-50 transition">
+                        <div class="flex items-start gap-3">
+                            <span class="bg-indigo-600 text-white font-bold text-sm w-7 h-7 rounded-lg flex items-center justify-center shrink-0">4</span>
+                            <div class="w-full">
+                                <span class="text-xs font-semibold text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded">Hitungan - Gaya Total</span>
+                                <p class="text-slate-800 text-sm sm:text-base mt-2 font-medium">
+                                    Sebuah mobil bermassa <strong>1.200 kg</strong> melaju di jalan lurus dengan percepatan <strong>4 m/s²</strong>. Hitunglah besar gaya total (F) yang dihasilkan mesin mobil tersebut!
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Soal 5 -->
+                    <div class="p-5 rounded-xl border border-slate-200 bg-slate-50/50 hover:bg-slate-50 transition">
+                        <div class="flex items-start gap-3">
+                            <span class="bg-indigo-600 text-white font-bold text-sm w-7 h-7 rounded-lg flex items-center justify-center shrink-0">5</span>
+                            <div class="w-full">
+                                <span class="text-xs font-semibold text-indigo-600 bg-indigo-50 px-2 py-0.5 rounded">Teori - Hukum Newton III</span>
+                                <p class="text-slate-800 text-sm sm:text-base mt-2 font-medium">
+                                    Sebutkan syarat-syarat sepasang gaya disebut sebagai pasangan Aksi-Reaksi menurut Hukum III Newton! Mengapa saat kita mendayung perahu ke belakang, perahu justru bergerak ke depan?
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Soal 6 -->
+                    <div class="p-5 rounded-xl border border-slate-200 bg-slate-50/50 hover:bg-slate-50 transition">
+                        <div class="flex items-start gap-3">
+                            <span class="bg-indigo-600 text-white font-bold text-sm w-7 h-7 rounded-lg flex items-center justify-center shrink-0">6</span>
+                            <div class="w-full">
+                                <span class="text-xs font-semibold text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded">Hitungan - Gaya Searah</span>
+                                <p class="text-slate-800 text-sm sm:text-base mt-2 font-medium">
+                                    Dua gaya mendatar yang searah masing-masing F₁ = <strong>30 N</strong> dan F₂ = <strong>20 N</strong> bekerja bersamaan pada meja bermassa <strong>5 kg</strong>. Tentukan percepatan meja tersebut jika lantai dianggap licin tanpa gesekan!
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Soal 7 -->
+                    <div class="p-5 rounded-xl border border-slate-200 bg-slate-50/50 hover:bg-slate-50 transition">
+                        <div class="flex items-start gap-3">
+                            <span class="bg-indigo-600 text-white font-bold text-sm w-7 h-7 rounded-lg flex items-center justify-center shrink-0">7</span>
+                            <div class="w-full">
+                                <span class="text-xs font-semibold text-indigo-600 bg-indigo-50 px-2 py-0.5 rounded">Teori & Analisis</span>
+                                <p class="text-slate-800 text-sm sm:text-base mt-2 font-medium">
+                                    Sebuah benda ditarik oleh dua gaya yang besarnya sama (misal 15 N) tetapi arahnya berlawanan. Berapakah nilai resultan gayanya? Bagaimanakah keadaan gerak benda tersebut berdasarkan Hukum I Newton?
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Soal 8 -->
+                    <div class="p-5 rounded-xl border border-slate-200 bg-slate-50/50 hover:bg-slate-50 transition">
+                        <div class="flex items-start gap-3">
+                            <span class="bg-indigo-600 text-white font-bold text-sm w-7 h-7 rounded-lg flex items-center justify-center shrink-0">8</span>
+                            <div class="w-full">
+                                <span class="text-xs font-semibold text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded">Hitungan - Kecepatan ke Percepatan</span>
+                                <p class="text-slate-800 text-sm sm:text-base mt-2 font-medium">
+                                    Balok bermassa <strong>4 kg</strong> mula-mula diam di atas lantai. Setelah ditarik gaya F selama <strong>5 detik</strong>, kecepatannya menjadi <strong>20 m/s</strong>. Hitunglah:<br>
+                                    a. Percepatan balok (a)<br>
+                                    b. Besar gaya dorong (F)
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Soal 9 -->
+                    <div class="p-5 rounded-xl border border-slate-200 bg-slate-50/50 hover:bg-slate-50 transition">
+                        <div class="flex items-start gap-3">
+                            <span class="bg-indigo-600 text-white font-bold text-sm w-7 h-7 rounded-lg flex items-center justify-center shrink-0">9</span>
+                            <div class="w-full">
+                                <span class="text-xs font-semibold text-indigo-600 bg-indigo-50 px-2 py-0.5 rounded">Teori - Aplikasi Roket</span>
+                                <p class="text-slate-800 text-sm sm:text-base mt-2 font-medium">
+                                    Jelaskan bagaimana roket dapat meluncur ke luar angkasa yang hampa udara jika ditinjau dari prinsip gaya aksi dan reaksi (Hukum III Newton)!
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Soal 10 -->
+                    <div class="p-5 rounded-xl border border-slate-200 bg-slate-50/50 hover:bg-slate-50 transition">
+                        <div class="flex items-start gap-3">
+                            <span class="bg-indigo-600 text-white font-bold text-sm w-7 h-7 rounded-lg flex items-center justify-center shrink-0">10</span>
+                            <div class="w-full">
+                                <span class="text-xs font-semibold text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded">Hitungan - Gaya Berlawanan (Gaya Gesek)</span>
+                                <p class="text-slate-800 text-sm sm:text-base mt-2 font-medium">
+                                    Sebuah benda bermassa <strong>6 kg</strong> ditarik ke kanan dengan gaya F = <strong>40 N</strong>. Jika gaya gesekan antara benda dan lantai adalah <strong>10 N</strong> (arah ke kiri), berapakah percepatan total yang dialami benda tersebut?
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-8 flex flex-col sm:flex-row justify-between items-center gap-4">
+                    <button onclick="switchTab('materi')" class="bg-slate-200 hover:bg-slate-300 text-slate-700 px-5 py-2.5 rounded-xl font-medium text-sm transition">
+                        &larr; Kembali ke Materi
+                    </button>
+                    <button onclick="switchTab('pengiriman')" class="bg-emerald-600 hover:bg-emerald-700 text-white px-6 py-3 rounded-xl font-medium text-sm transition shadow-md flex items-center gap-2">
+                        Petunjuk Kirim Tugas WA &rarr;
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- TAB 3: PANDUAN PENGIRIMAN WA -->
+        <section id="tab-pengiriman" class="hidden space-y-6">
+            <div class="bg-white rounded-2xl shadow-sm border border-slate-200 p-6 sm:p-8">
+                <div class="border-b border-slate-100 pb-4 mb-6">
+                    <span class="text-xs font-semibold uppercase tracking-wider text-emerald-600 bg-emerald-50 px-3 py-1 rounded-full">Instruksi Pengumpulan</span>
+                    <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mt-2">Panduan Pengiriman Tugas</h2>
+                    <p class="text-slate-600 text-sm mt-1">Ikuti langkah-langkah di bawah ini untuk mengirimkan hasil pekerjaan Anda.</p>
+                </div>
+
+                <!-- Step-by-Step Guide -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+                    <div class="bg-slate-50 p-5 rounded-xl border border-slate-200 flex flex-col items-center text-center">
+                        <div class="w-12 h-12 rounded-full bg-indigo-100 text-indigo-600 flex items-center justify-center font-bold text-lg mb-3">1</div>
+                        <h3 class="font-semibold text-slate-800 text-base">Tulis di Kertas</h3>
+                        <p class="text-xs text-slate-600 mt-2">Tuliskan jawaban dari 10 soal di kertas HVS/Buku Tulis. Lengkapi dengan <strong>Nama Lengkap</strong>, <strong>Kelas</strong>, dan <strong>Tanggal</strong>.</p>
+                    </div>
+
+                    <div class="bg-slate-50 p-5 rounded-xl border border-slate-200 flex flex-col items-center text-center">
+                        <div class="w-12 h-12 rounded-full bg-indigo-100 text-indigo-600 flex items-center justify-center font-bold text-lg mb-3">2</div>
+                        <h3 class="font-semibold text-slate-800 text-base">Foto Lembar Jawaban</h3>
+                        <p class="text-xs text-slate-600 mt-2">Ambil foto lembar jawaban dengan pencahayaan yang terang dan tulisan yang jelas agar mudah dibaca oleh guru.</p>
+                    </div>
+
+                    <div class="bg-slate-50 p-5 rounded-xl border border-slate-200 flex flex-col items-center text-center">
+                        <div class="w-12 h-12 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center font-bold text-lg mb-3">3</div>
+                        <h3 class="font-semibold text-slate-800 text-base">Kirim ke WhatsApp</h3>
+                        <p class="text-xs text-slate-600 mt-2">Klik tombol kirim di bawah untuk membuka WhatsApp tujuan ke nomor <strong>081373363236</strong> dan lampirkan fotonya.</p>
+                    </div>
+                </div>
+
+                <!-- Form Data Diri Ringkas untuk Auto-Format WA -->
+                <div class="bg-slate-50 border border-slate-200 rounded-xl p-6 max-w-xl mx-auto space-y-4">
+                    <h3 class="font-bold text-slate-900 text-sm">Isi Identitas Sebelum Mengirim:</h3>
+                    
+                    <div>
+                        <label for="nama-siswa" class="block text-xs font-semibold text-slate-700 mb-1">Nama Lengkap</label>
+                        <input type="text" id="nama-siswa" placeholder="Contoh: Ahmad Subagja" class="w-full px-3 py-2 border border-slate-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                    </div>
+
+                    <div>
+                        <label for="kelas-siswa" class="block text-xs font-semibold text-slate-700 mb-1">Kelas</label>
+                        <input type="text" id="kelas-siswa" placeholder="Contoh: VIII-A" class="w-full px-3 py-2 border border-slate-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                    </div>
+
+                    <div class="pt-2">
+                        <button onclick="kirimWhatsApp()" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-semibold py-3 px-4 rounded-xl shadow-md transition flex items-center justify-center gap-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/>
+                            </svg>
+                            Buka WhatsApp (081373363236)
+                        </button>
+                    </div>
+                </div>
+
+                <div class="mt-6 text-center text-xs text-slate-500">
+                    <p>Nomor Tujuan WhatsApp Pengumpulan: <strong class="text-slate-800 font-mono">081373363236</strong></p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-slate-200 py-6 mt-12 text-center text-xs text-slate-500">
+        <div class="max-w-6xl mx-auto px-4">
+            <p>&copy; Portal Interaktif IPA SMP/SMA - Materi Gaya dan Hukum Newton</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript Logika Tab & Pengiriman WA -->
+    <script>
+        function switchTab(tabName) {
+            // Hide all tab contents
+            const tabs = ['materi', 'soal', 'pengiriman'];
+            tabs.forEach(tab => {
+                const element = document.getElementById('tab-' + tab);
+                const btn = document.getElementById('btn-' + tab);
+                
+                if (element) {
+                    element.classList.add('hidden');
+                }
+                
+                if (btn) {
+                    btn.className = "px-4 py-2 text-sm font-medium rounded-lg transition-all text-white hover:bg-white/10";
+                }
+            });
+
+            // Show current tab
+            const targetTab = document.getElementById('tab-' + tabName);
+            const targetBtn = document.getElementById('btn-' + tabName);
+
+            if (targetTab) {
+                targetTab.classList.remove('hidden');
+            }
+
+            if (targetBtn) {
+                targetBtn.className = "px-4 py-2 text-sm font-medium rounded-lg transition-all bg-white text-indigo-600 shadow-sm";
+            }
+
+            // Scroll to top smoothly
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function kirimWhatsApp() {
+            const nama = document.getElementById('nama-siswa').value.trim();
+            const kelas = document.getElementById('kelas-siswa').value.trim();
+            const phoneNumber = "6281373363236"; // Convert 081373363236 to country code 62 format
+
+            let textMessage = "Halo Bapak/Ibu Guru, berikut adalah tugas IPA (Materi Gaya & Hukum Newton) saya:\n\n";
+            textMessage += " Nama: " + (nama || "[Belum Diisi]") + "\n";
+            textMessage += " Kelas: " + (kelas || "[Belum Diisi]") + "\n";
+            textMessage += " Tugas: 10 Soal Teori & Hitungan Hukum Newton\n\n";
+            textMessage += "Berikut saya lampirkan foto lembar jawaban saya. Terima kasih!";
+
+            const encodedMessage = encodeURIComponent(textMessage);
+            const waUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+
+            window.open(waUrl, '_blank');
+        }
+    </script>
+</body>
+</html>
